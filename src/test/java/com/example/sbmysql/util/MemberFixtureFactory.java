@@ -11,7 +11,6 @@ public class MemberFixtureFactory {
         return new EasyRandom(param).nextObject(Member.class);
     }
     static public Member create(Long seed){
-
         var param = new EasyRandomParameters().seed(seed);
         return new EasyRandom(param).nextObject(Member.class);
     }
