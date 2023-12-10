@@ -1,7 +1,7 @@
-package com.example.fastcampusmysql.application.usecase;
+package com.example.sbmysql.application.usecase;
 
-import com.example.fastcampusmysql.domain.follow.service.FollowWriteService;
-import com.example.fastcampusmysql.domain.member.service.MemberReadService;
+import com.example.sbmysql.domain.follow.service.FollowWriteService;
+import com.example.sbmysql.domain.member.service.MemberReadService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class CreateFollowMemberUsecase {
-    final private MemberReadService memberReadService;
-    final private FollowWriteService followWriteService;
+    private final MemberReadService memberReadService;
+    private final FollowWriteService followWriteService;
 
     public void execute(Long fromMemberId, Long toMemberId) {
 

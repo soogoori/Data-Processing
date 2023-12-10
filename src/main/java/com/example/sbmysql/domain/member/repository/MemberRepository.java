@@ -1,6 +1,6 @@
-package com.example.fastcampusmysql.domain.member.repository;
+package com.example.sbmysql.domain.member.repository;
 
-import com.example.fastcampusmysql.domain.member.entity.Member;
+import com.example.sbmysql.domain.member.entity.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -20,8 +20,8 @@ import java.util.Optional;
 @Repository
 public class MemberRepository {
 
-    final private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    static final private String TABLE = "member";
+    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    private static final String TABLE = "member";
 
     private static final RowMapper<Member> rowMapper = (ResultSet rs, int rowNum) -> Member
             .builder()

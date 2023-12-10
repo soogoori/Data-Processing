@@ -1,6 +1,6 @@
-package com.example.fastcampusmysql.domain.member;
+package com.example.sbmysql.domain.member;
 
-import com.example.fastcampusmysql.util.MemberFixtureFactory;
+import com.example.sbmysql.util.MemberFixtureFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

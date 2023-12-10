@@ -1,10 +1,10 @@
-package com.example.fastcampusmysql.domain.member.service;
+package com.example.sbmysql.domain.member.service;
 
-import com.example.fastcampusmysql.domain.member.dto.RegisterMemberCommand;
-import com.example.fastcampusmysql.domain.member.entity.Member;
-import com.example.fastcampusmysql.domain.member.entity.MemberNicknameHistory;
-import com.example.fastcampusmysql.domain.member.repository.MemberNicknameHistoryRepository;
-import com.example.fastcampusmysql.domain.member.repository.MemberRepository;
+import com.example.sbmysql.domain.member.dto.RegisterMemberCommand;
+import com.example.sbmysql.domain.member.entity.Member;
+import com.example.sbmysql.domain.member.entity.MemberNicknameHistory;
+import com.example.sbmysql.domain.member.repository.MemberNicknameHistoryRepository;
+import com.example.sbmysql.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberWriteService {
 
-    final private MemberRepository memberRepository;
-    final private MemberNicknameHistoryRepository memberNicknameHistoryRepository;
+    private final MemberRepository memberRepository;
+    private final MemberNicknameHistoryRepository memberNicknameHistoryRepository;
 
     public Member create(RegisterMemberCommand command){
 

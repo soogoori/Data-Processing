@@ -1,4 +1,4 @@
-package com.example.fastcampusmysql.hello;
+package com.example.sbmysql.hello;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 public class HelloWorldController {
-    final private NamedParameterJdbcTemplate jdbcTemplate;
+    private final NamedParameterJdbcTemplate jdbcTemplate;
 
 
     @GetMapping("/hello")

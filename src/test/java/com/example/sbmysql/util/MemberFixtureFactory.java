@@ -1,6 +1,6 @@
-package com.example.fastcampusmysql.util;
+package com.example.sbmysql.util;
 
-import com.example.fastcampusmysql.domain.member.entity.Member;
+import com.example.sbmysql.domain.member.entity.Member;
 import org.jeasy.random.EasyRandom;
 import org.jeasy.random.EasyRandomParameters;
 

@@ -1,11 +1,11 @@
-package com.example.fastcampusmysql.domain.member.service;
+package com.example.sbmysql.domain.member.service;
 
-import com.example.fastcampusmysql.domain.member.dto.MemberDto;
-import com.example.fastcampusmysql.domain.member.dto.MemberNicknameHistoryDto;
-import com.example.fastcampusmysql.domain.member.entity.Member;
-import com.example.fastcampusmysql.domain.member.entity.MemberNicknameHistory;
-import com.example.fastcampusmysql.domain.member.repository.MemberNicknameHistoryRepository;
-import com.example.fastcampusmysql.domain.member.repository.MemberRepository;
+import com.example.sbmysql.domain.member.dto.MemberDto;
+import com.example.sbmysql.domain.member.dto.MemberNicknameHistoryDto;
+import com.example.sbmysql.domain.member.entity.Member;
+import com.example.sbmysql.domain.member.entity.MemberNicknameHistory;
+import com.example.sbmysql.domain.member.repository.MemberNicknameHistoryRepository;
+import com.example.sbmysql.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +15,8 @@ import java.util.List;
 @Service
 public class MemberReadService {
 
-    final private MemberRepository memberRepository;
-    final private MemberNicknameHistoryRepository memberNicknameHistoryRepository;
+    private final MemberRepository memberRepository;
+    private final MemberNicknameHistoryRepository memberNicknameHistoryRepository;
 
     public MemberDto getMember(Long id){
 

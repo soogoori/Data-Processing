@@ -1,4 +1,4 @@
-package com.example.fastcampusmysql.domain.member.entity;
+package com.example.sbmysql.domain.member.entity;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -12,10 +12,10 @@ import java.util.Objects;
 public class Member {
     private final Long id;
     private String nickname;
-    final private String email;
-    final private LocalDate birthday;
-    final private LocalDateTime createdAt;
-    final private static Long NAME_MAX_LENGTH = 10L;
+    private final String email;
+    private final LocalDate birthday;
+    private final LocalDateTime createdAt;
+    private static final Long NAME_MAX_LENGTH = 10L;
 
     @Builder
     public Member(Long id, String nickname, String email, LocalDate birthday, LocalDateTime createdAt) {

@@ -1,8 +1,8 @@
-package com.example.fastcampusmysql.domain.follow.service;
+package com.example.sbmysql.domain.follow.service;
 
-import com.example.fastcampusmysql.domain.follow.entity.Follow;
-import com.example.fastcampusmysql.domain.follow.repository.FollowRepository;
-import com.example.fastcampusmysql.domain.member.dto.MemberDto;
+import com.example.sbmysql.domain.follow.entity.Follow;
+import com.example.sbmysql.domain.follow.repository.FollowRepository;
+import com.example.sbmysql.domain.member.dto.MemberDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -11,7 +11,7 @@ import org.springframework.util.Assert;
 @Service
 public class FollowWriteService {
 
-    final private FollowRepository followRepository;
+    private final FollowRepository followRepository;
 
     public void create(MemberDto fromMember, MemberDto toMember) {
 

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FastcampusMysqlApplication {
+public class SbMysqlApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FastcampusMysqlApplication.class, args);
+        SpringApplication.run(SbMysqlApplication.class, args);
     }
 
 }
