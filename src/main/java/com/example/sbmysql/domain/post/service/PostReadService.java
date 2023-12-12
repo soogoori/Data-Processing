@@ -48,7 +48,6 @@ public class PostReadService {
         return new PageCursor<>(cursorRequest.next(nextKey), posts);
     }
 
-
     /**
      * 여러 개의 회원 아이디로 게시물 검색
      * @param memberIds
@@ -60,6 +59,10 @@ public class PostReadService {
         var nextKey = getNextKey(posts);
 
         return new PageCursor<>(cursorRequest.next(nextKey), posts);
+    }
+
+    public List<Post> getPosts(List<Long> ids) {
+        return postRepository.findAllByInId(ids);
     }
 
     private List<Post> findAllBy(Long memberId, CursorRequest cursorRequest) {
