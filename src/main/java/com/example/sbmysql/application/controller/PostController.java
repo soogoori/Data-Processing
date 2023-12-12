@@ -1,5 +1,6 @@
 package com.example.sbmysql.application.controller;
 
+import com.example.sbmysql.application.usecase.GetTimelinePostUsecase;
 import com.example.sbmysql.domain.post.dto.DailyPostCountRequest;
 import com.example.sbmysql.domain.post.dto.DailyPostCountResponse;
 import com.example.sbmysql.domain.post.dto.PostCommand;
@@ -23,6 +24,7 @@ public class PostController {
 
     private final PostWriteService postWriteService;
     private final PostReadService postReadService;
+    private final GetTimelinePostUsecase getTimelinePostUsecase;
 
     @PostMapping
     public Long create(@RequestBody PostCommand command) {
@@ -35,13 +37,17 @@ public class PostController {
     }
 
     @GetMapping("/members/{memberId}")
-    public Page<Post> getPosts(@PathVariable Long memberId, Pageable pageable){
+    public Page<Post> getPosts(@PathVariable Long memberId, Pageable pageable) {
         return postReadService.getPosts(memberId, pageable);
     }
 
     @GetMapping("/members/{memberId}/bu-cursor")
-    public PageCursor<Post> getPostsByCursor(@PathVariable Long memberId, CursorRequest cursorRequest){
+    public PageCursor<Post> getPostsByCursor(@PathVariable Long memberId, CursorRequest cursorRequest) {
         return postReadService.getPosts(memberId, cursorRequest);
     }
 
+    @GetMapping("/members/{memberId}/timeline")
+    public PageCursor<Post> getTimeline(@PathVariable Long memberId, CursorRequest cursorRequest) {
+        return getTimelinePostUsecase.execute(memberId, cursorRequest);
+    }
 }
