@@ -7,6 +7,7 @@ import com.example.sbmysql.domain.member.repository.MemberNicknameHistoryReposit
 import com.example.sbmysql.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -15,6 +16,7 @@ public class MemberWriteService {
     private final MemberRepository memberRepository;
     private final MemberNicknameHistoryRepository memberNicknameHistoryRepository;
 
+    @Transactional
     public Member create(RegisterMemberCommand command){
 
         // 회원정보(이메일, 닉네임, 생년월일) 등록
